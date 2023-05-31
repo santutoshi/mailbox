@@ -1,0 +1,22 @@
+@use "../abstracts/variables" as *;
+@use "../base/typography" as *;
+.mail-list {
+  background: $color__dark-grey-300;
+  padding: 51px 30px 57px 30px;
+  .profile-block {
+    display: flex;
+    align-items: start;
+    justify-items: flex-end;
+    padding: 30px 0px 0px 30px;
+    .col-5 {
+      display: flex;
+      justify-content: flex-end;
+      span {
+        font-weight: 700;
+        padding-right: 30px;
+        margin-top: 8px;
+        font-size: $font__size__sm;
+      }
+    }
+  }
+}

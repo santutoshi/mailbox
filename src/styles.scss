@@ -1,8 +1,10 @@
 /* You can add global styles to this file, and also import other style files */
 @use "./scss/abstracts/" as *;
 @use "./scss/base/" as *;
+@use "./scss/vendors/" as *;
 @use "./scss/components/" as *;
 @use "./scss/layouts/" as *;
+@use "./scss/pages/" as *;
 
 /* for the fontastic icons */
 @import "./assets/fontastic-icons/styles.css";

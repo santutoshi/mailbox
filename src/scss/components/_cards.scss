@@ -1,0 +1,18 @@
+@use "../base/typography" as *;
+@use "../abstracts/variables" as *;
+.mail-card {
+  border-radius: $base-card-border_radius;
+  width: 520px;
+  height: 215px;
+  margin-bottom: 27px;
+  background: $color__white;
+  .message-attachment {
+    padding: 20px 41px 30px 120px;
+    p {
+      margin-bottom: 9px;
+    }
+    .attachment {
+      color: $brand__color-primary;
+    }
+  }
+}

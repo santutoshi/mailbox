@@ -3,8 +3,9 @@ export interface MessageModel {
   name: string;
   subject: string;
   email: string;
-  date: Date;
+  date: string;
   message: string;
   attachment?: any;
   userProfile: string;
+  description?: string;
 }

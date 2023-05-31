@@ -1,4 +1,8 @@
 <div class="row">
-  <div class="col-3">Card Section</div>
+  <div class="col-5 mail-list">
+    <ng-container *ngFor="let inbox of mailData$ | async">
+      <app-mail-card [data]="inbox"></app-mail-card>
+    </ng-container>
+  </div>
   <div class="col-7">Message Section</div>
 </div>

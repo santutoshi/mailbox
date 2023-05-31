@@ -4,7 +4,7 @@
 @use "../abstracts/extend" as *;
 .navbar-nav {
   width: 380px;
-  height: auto;
+  height: 100vh;
   background-color: $color__light-grey-background;
 
   ul {
@@ -17,11 +17,16 @@
   }
 
   li {
+    position: relative;
     padding: 8px 8px 8px 52px;
     margin-bottom: 7px;
     color: $color-text;
     box-shadow: none;
     font-size: $font__size__x-lg;
+  }
+
+  .profile {
+    padding: 42px 0 39px 52px;
   }
 
   .folder {
@@ -40,6 +45,16 @@
 
 li.nav-item.active {
   background-color: $color__white;
+  &::before {
+    content: "";
+    position: absolute;
+    height: 40px;
+    width: 8px;
+    left: 0px;
+    top: 2px;
+    background: #3ebbec;
+    border-radius: 0px 1.998px 1.998px 0px;
+  }
 }
 
 .nav-item {

@@ -1,0 +1,28 @@
+<div class="mail-card">
+  <div class="card-body">
+    <div class="row profile-block">
+      <div class="col-7">
+        <lib-user-profile [url]="data.userProfile"></lib-user-profile>
+      </div>
+      <div class="col-5">
+        <span
+          >{{ data.date | timeAgo }} &nbsp; &nbsp;
+          {{ data.date | date : "shortTime" }}</span
+        >
+      </div>
+    </div>
+    <div class="message-attachment">
+      <p>{{ data.message }}</p>
+      <span
+        class="attachment"
+        *ngIf="data.attachment"
+        [ngStyle]="{ display: data.attachment?.length ? 'block' : 'none' }"
+      >
+        <div class="gly-rotate-n-45">
+          <span class="icon icon-attach"></span>
+        </div>
+        <span> {{ data.attachment?.length }} Attachments </span>
+      </span>
+    </div>
+  </div>
+</div>

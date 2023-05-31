@@ -1,0 +1,60 @@
+@use "../abstracts/variables" as *;
+.btn {
+  min-width: 130px;
+  height: 40px;
+  border: none;
+  outline: none;
+  &:hover {
+    background-color: $brand__color-primary;
+  }
+  &.btn-white {
+    background-color: $color__white;
+    color: $color__black;
+    &:hover {
+      color: $brand__color-secondary;
+      background-color: $color__black;
+      i {
+        color: $color__black;
+      }
+    }
+  }
+}
+
+.btn-primary {
+  background: $brand__color-secondary;
+
+  &:hover,
+  &:focus,
+  &:active,
+  &:first-child:active,
+  &.disabled,
+  &:disabled {
+    background-color: $brand__color-secondary !important;
+    outline: none;
+    box-shadow: none;
+  }
+  &:focus {
+    box-shadow: 0 0 0 0.2rem rgb(38 205 195 / 43%);
+  }
+  i {
+    color: $color__white;
+  }
+}
+
+.btn-danger {
+  background: $color-danger;
+  &:hover,
+  &:focus,
+  &.disabled,
+  &:disabled {
+    background-color: $color-danger;
+    outline: none;
+    box-shadow: none;
+  }
+  &:focus {
+    box-shadow: 0 0 0 0.2rem rgb(38 205 195 / 43%);
+  }
+  i {
+    color: $color__white;
+  }
+}

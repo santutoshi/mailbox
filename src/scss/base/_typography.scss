@@ -12,12 +12,15 @@ $font__weight-bolder: bolder;
 $font__weight-base: $font__weight-normal;
 
 /* Font sizes */
+
 $font__size-base: 1rem; // Assumes the browser default, typically `16px`
+$font__size__sm: $font__size-base * 0.875; //14px
 $font__size__md: $font__size-base * 1.125; // 18px
 $font__size__lg: $font__size-base * 1.25; // 20px
 $font__size__x-lg: $font__size-base * 1.5; //24px
 //border radius
-$base-border_radius: $font__size-base * 0.938; //15px
+$base-border_radius: $font__size-base * 0.625; //10px
+$base-card-border_radius: $font__size-base * 1.25; //20px
 /* Heading font size */
 $h1-font__size: $font__size-base * 1.5; //24px
 $h2-font__size: $font__size__lg; //18px

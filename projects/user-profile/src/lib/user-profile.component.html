@@ -1,0 +1,10 @@
+<div class="profile">
+  <div class="logo" [ngStyle]="styleConfig">
+    <img [src]="url | sanitizeUrl" [alt]="imageAlt" />
+    <ng-content></ng-content>
+  </div>
+  <div class="details">
+    <h4>Name</h4>
+    <p>Job Title</p>
+  </div>
+</div>

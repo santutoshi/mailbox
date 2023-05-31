@@ -1,0 +1,27 @@
+/* Natural colors */
+$color__white: #ffffff;
+$color__black: #000000;
+
+/* Brand colors */
+$color__blue-pure: #1fb5eb;
+$color__blue_light: #c7dfef;
+$color__red-500: #ff5f5f;
+
+/* Shades of grey */
+$color__dark-text-800: #333333;
+$color__dark-text-300: #333333b3;
+
+/* Background */
+$color__light-grey-background: #f5f8fa;
+$color__dark-grey-300: #f9faf5;
+
+/* Body background colors */
+
+$color-text: $color__dark-text-800;
+$color-text-light: $color__dark-text-300;
+$color-page-bg-text: $color__dark-grey-300;
+$color-danger: $color__red-500;
+
+/* Primary, accent and tertiary colors */
+$brand__color-primary: $color__blue-pure;
+$brand__color-secondary: $color__blue_light;

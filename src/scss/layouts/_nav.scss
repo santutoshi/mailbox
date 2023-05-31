@@ -1,0 +1,71 @@
+@use "../abstracts/variables" as *;
+@use "../base/typography" as *;
+@use "../abstracts/mixins" as *;
+@use "../abstracts/extend" as *;
+.navbar-nav {
+  width: 380px;
+  height: auto;
+  background-color: $color__light-grey-background;
+
+  ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+  .icon {
+    margin-right: 28px;
+  }
+
+  li {
+    padding: 8px 8px 8px 52px;
+    margin-bottom: 7px;
+    color: $color-text;
+    box-shadow: none;
+    font-size: $font__size__x-lg;
+  }
+
+  .folder {
+    margin-top: 87px;
+
+    h1 {
+      @extend %nav-l-m;
+      font-size: 30px;
+      font-weight: 800;
+    }
+    ul {
+      margin-top: 40px;
+    }
+  }
+}
+
+li.nav-item.active {
+  background-color: $color__white;
+}
+
+.nav-item {
+  a {
+    text-decoration: none;
+    color: $color-text;
+  }
+
+  &.active {
+    .nav-link {
+      .icon {
+        color: $brand__color-primary;
+      }
+    }
+  }
+}
+
+/* use of mixins for color change*/
+.icon-folder {
+  &.office {
+    @include folder-icon($brand__color-primary);
+  }
+  &.personal {
+    @include folder-icon(#ff8892);
+  }
+  &.freelance {
+    @include folder-icon(#ffdd62);
+  }
+}

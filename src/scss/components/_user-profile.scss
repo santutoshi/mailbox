@@ -1,0 +1,34 @@
+@use "../abstracts/extend" as *;
+@use "../base/typography" as *;
+@use "../abstracts/variables" as *;
+
+.logo {
+  position: relative;
+
+  img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: center;
+  }
+}
+
+.profile {
+  display: flex;
+  padding: 42px 0px 39px 52px;
+}
+
+.details {
+  margin-left: 20px;
+  h4 {
+    font-size: $h2-font__size;
+    font-weight: 800;
+    color: $brand__color-primary;
+    line-height: 27px;
+  }
+  p {
+    font-size: $font__size__md;
+    line-height: 27px;
+  }
+}

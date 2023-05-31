@@ -1,0 +1,31 @@
+<div class="navbar-nav">
+  <lib-user-profile
+    [url]="
+      'https://emedia1.nhs.wales/HEIW2/cache/file/F4C33EF0-69EE-4445-94018B01ADCF6FD4.png'
+    "
+  ></lib-user-profile>
+  <ul>
+    <div *ngFor="let nav of navMenuItems | groupBy : 'group' : 'service'">
+      <li class="nav-item" routerLinkActive="active" [routerLink]="nav.link">
+        <a class="nav-link" aria-current="page">
+          <span [ngClass]="nav.icon"></span>
+          {{ nav.name }}</a
+        >
+      </li>
+    </div>
+  </ul>
+
+  <div class="folder">
+    <h1>Folders</h1>
+    <ul>
+      <div *ngFor="let g of navMenuItems | groupBy : 'group' : 'group'">
+        <li class="nav-item" routerLinkActive="active" [routerLink]="g.link">
+          <a class="nav-link" aria-current="page">
+            <span [ngClass]="g.icon"></span>
+            {{ g.name }}</a
+          >
+        </li>
+      </div>
+    </ul>
+  </div>
+</div>

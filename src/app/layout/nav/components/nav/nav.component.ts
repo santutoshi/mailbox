@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { CalculationService } from 'src/app/worker/calculation.service';
 import { NUMBER } from 'src/app/worker/num.enum';
 import { MenuItem, MENU_ITEMS } from '../../data-access/models/nav.model';
+declare var $: any;
 
 @Component({
   selector: 'app-nav',
@@ -19,4 +20,12 @@ export class NavComponent {
   };
 
   constructor(private calculationService: CalculationService) {}
+
+  onSideBarToggle(): void {
+    if ($('#nav').hasClass('navbar-nav')) {
+      $('.navbar-nav').removeClass('responsive');
+    } else {
+      $('.navbar-nav').addClass('responsive');
+    }
+  }
 }

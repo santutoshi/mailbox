@@ -1,9 +1,11 @@
 @use "../abstracts/variables" as *;
+@use "../base/typography" as *;
 .btn {
   min-width: 130px;
   height: 40px;
   border: none;
   outline: none;
+  border-radius: $base-border_radius;
   &:hover {
     background-color: $brand__color-primary;
   }

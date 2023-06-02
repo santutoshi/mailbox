@@ -1,4 +1,7 @@
-<div class="navbar-nav">
+<div class="navbar-nav" #nav>
+  <a href="javascript:void(0);" class="collapse" (click)="onSideBarToggle()">
+    <i class="icon icon-bars"></i>
+  </a>
   <lib-user-profile
     [url]="'assets/images/Image 5.png'"
     [data]="userDetails"
@@ -26,5 +29,9 @@
         </li>
       </div>
     </ul>
+  </div>
+
+  <div class="button">
+    <button class="btn btn-danger">Compose</button>
   </div>
 </div>

@@ -1,0 +1,19 @@
+@use "../abstracts/variables" as *;
+@use "../base/typography" as *;
+.badge {
+  font-size: $font__size__md;
+  border-radius: 16px;
+  padding: 8px;
+  &.badge-red {
+    background-color: $color-danger;
+    color: $color__white;
+  }
+  &.badge-blue {
+    background-color: $brand__color-primary;
+    color: $color__black;
+  }
+  &.badge-success {
+    background-color: $color__success;
+    color: $color__black;
+  }
+}

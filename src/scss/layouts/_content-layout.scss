@@ -1,12 +1,15 @@
 @use "../base/typography" as *;
 @use "../abstracts/variables" as *;
 .content__layout-container {
-  width: calc(100% - 380px);
+  width: 100%;
   height: auto;
 }
 
-.page {
-  display: flex;
+.page-header {
+  justify-content: center;
+  padding: 20px;
+  font-size: $font__size__md;
+  background-color: $brand__color-secondary;
 }
 
 .attachment {

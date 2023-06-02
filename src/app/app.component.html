@@ -1,1 +1,10 @@
-<router-outlet></router-outlet>
+<div class="row page-header">
+  <div class="">Status:</div>
+  <div class="col">
+    <span class="badge badge-success" *ngIf="isOnline">Online</span>
+    <span class="badge badge-red" *ngIf="!isOnline">Offline</span>
+  </div>
+</div>
+<div class="row">
+  <router-outlet></router-outlet>
+</div>

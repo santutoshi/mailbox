@@ -6,6 +6,7 @@ import { contentRoutes } from './inbox.routes';
 import { MailCardComponent } from 'src/app/shared/ui/mail-card/mail-card.component';
 import { NgxsModule } from '@ngxs/store';
 import { InboxStates } from './data-access/store/inbox.states';
+import { MailDetailComponent } from 'src/app/shared/ui/mail-detail/mail-detail.component';
 
 @NgModule({
   declarations: [InboxComponent],
@@ -14,6 +15,7 @@ import { InboxStates } from './data-access/store/inbox.states';
     RouterModule.forChild(contentRoutes),
     NgxsModule.forFeature([InboxStates]),
     MailCardComponent,
+    MailDetailComponent,
   ],
 })
 export class InboxModule {}

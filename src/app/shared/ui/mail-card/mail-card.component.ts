@@ -1,7 +1,7 @@
 import { CommonModule, DatePipe } from '@angular/common';
 import { Component, Input } from '@angular/core';
-import { UserProfileModule } from 'projects/user-profile/src/public-api';
 import { MessageModel } from 'src/app/modules/inbox/data-access/models/message.model';
+import { UserProfileModule } from 'user-profile';
 import { SharedModule } from '../../shared.module';
 
 @Component({

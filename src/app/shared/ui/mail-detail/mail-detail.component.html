@@ -1,1 +1,40 @@
-<p>mail-detail works!</p>
+<div class="message-container">
+  <div class="actions-section">
+    <span class="icon icon-reply"></span>
+    <span class="icon icon-reply-all"></span>
+    <span class="icon icon-folder"></span>
+    <span class="icon icon-trash"></span>
+  </div>
+  <div class="messsage-body">
+    <lib-user-profile
+      [url]="data.userProfile"
+      [data]="{ name: data.name, role: data.subject, email: data.email }"
+    ></lib-user-profile>
+    <div class="detail">
+      <span class="time">
+        {{ data.date | timeAgo }} &nbsp; &nbsp;{{
+          data.date | date : "shortTime"
+        }}</span
+      >
+
+      <h1 class="user-name">Hi {{ data.name }},</h1>
+      <p class="description">{{ data.description }}</p>
+
+      <span
+        class="attachment"
+        *ngIf="data.attachment"
+        [ngStyle]="{ display: data.attachment?.length ? 'block' : 'none' }"
+      >
+        <div class="gly-rotate-n-45">
+          <span class="icon icon-attach"></span>
+        </div>
+        <span> {{ data.attachment?.length }} Attachments </span>
+        <div class="image-container">
+          <ng-container *ngFor="let image of data.attachment">
+            <img [src]="image" />
+          </ng-container>
+        </div>
+      </span>
+    </div>
+  </div>
+</div>

@@ -1,3 +1,5 @@
+@use "../base/typography" as *;
+@use "../abstracts/variables" as *;
 .content__layout-container {
   width: calc(100% - 380px);
   height: auto;
@@ -5,4 +7,8 @@
 
 .page {
   display: flex;
+}
+
+.attachment {
+  color: $brand__color-primary;
 }

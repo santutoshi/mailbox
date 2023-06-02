@@ -2,7 +2,10 @@
   <div class="card-body">
     <div class="row profile-block">
       <div class="col-7">
-        <lib-user-profile [url]="data.userProfile"></lib-user-profile>
+        <lib-user-profile
+          [url]="data.userProfile"
+          [data]="{ name: data.name, role: data.subject }"
+        ></lib-user-profile>
       </div>
       <div class="col-5">
         <span

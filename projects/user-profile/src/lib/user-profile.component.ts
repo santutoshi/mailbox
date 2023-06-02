@@ -12,15 +12,21 @@ export class SanitizeUrlPipe implements PipeTransform {
   }
 }
 
+export interface Data {
+  name: string;
+  role?: string;
+  email?: string;
+  h1Color?: string;
+}
+
 @Component({
   selector: 'lib-user-profile',
   templateUrl: './user-profile.component.html',
-  styles: [],
 })
 export class UserProfileComponent {
   /* Private variable for image source url */
   private _url!: string;
-
+  private _data!: Data;
   /* props for image source url */
   @Input() set url(value: string) {
     if (!value) {
@@ -31,6 +37,11 @@ export class UserProfileComponent {
     }
   }
 
+  /**props for Name, Role and Email and theirs, colors */
+  @Input() set data(value: Data) {
+    this._data = value;
+  }
+
   /**
    * Getter function for image source url
    *
@@ -38,6 +49,15 @@ export class UserProfileComponent {
    * */
   get url(): string {
     return this._url;
+  }
+
+  /**
+   * Getter function for image source url
+   *
+   * @returns string
+   * */
+  get data(): Data {
+    return this._data;
   }
 
   /* props for image description */

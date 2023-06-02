@@ -37,7 +37,7 @@
   }
 }
 
-@media only screen and (max-width: 1920px) and (min-width: 768px) {
+@media only screen and (min-width: 768px) and (max-width: 1920px) {
   /* For desktop: */
   .col-1 {
     width: 8.33%;

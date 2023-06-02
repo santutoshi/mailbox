@@ -20,3 +20,52 @@
     }
   }
 }
+
+.message-container {
+  .actions-section {
+    padding: 52px 0px 0px 152px;
+    .icon {
+      font-size: medium;
+      padding-right: 25px;
+      color: $color-text-light;
+    }
+  }
+
+  .profile {
+    margin: 98px 0px 0px 60px;
+  }
+
+  .message-body {
+    padding: 52px 0px 0px 152px;
+  }
+  .detail {
+    padding-left: 152px;
+    padding-right: 203px;
+    .time {
+      font-size: $font__size__sm;
+      margin: 30px 0 28px 0;
+      display: inline-block;
+      font-weight: bold;
+    }
+    .user-name {
+      font-size: $font__size__x-lg;
+      font-weight: bold;
+      margin-bottom: 12px;
+    }
+    .description {
+      margin-bottom: 29px;
+    }
+  }
+}
+
+.image-container {
+  margin-top: 29px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-gap: 10px;
+}
+
+.image-container img {
+  width: 100%;
+  height: auto;
+}

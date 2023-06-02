@@ -54,3 +54,15 @@ export const MESSAGES_DATA: Array<MessageModel> = [
     userProfile: 'assets/images/NoPathFemale.png',
   },
 ];
+
+export const INITIAL_MESSAGE = {
+  id: 0,
+  name: '',
+  subject: '',
+  email: '',
+  message: '',
+  attachment: [],
+  description: '',
+  date: '',
+  userProfile: '',
+};

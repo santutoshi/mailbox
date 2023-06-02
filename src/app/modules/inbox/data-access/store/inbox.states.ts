@@ -19,7 +19,6 @@ export class InboxStates {
     return this._inboxService.getMail().pipe(
       map((mail: any) => {
         ctx.patchState({ mailList: mail });
-        console.log(mail);
       }),
       catchError((error: any) => {
         console.log('error', error);

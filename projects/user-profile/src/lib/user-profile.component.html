@@ -4,7 +4,10 @@
     <ng-content></ng-content>
   </div>
   <div class="details">
-    <h4>Name</h4>
-    <p>Job Title</p>
+    <h4 [ngStyle]="{ color: data && data.h1Color ? data.h1Color : '#333333' }">
+      {{ data?.name }}
+    </h4>
+    <span *ngIf="data?.role" class="role">{{ data.role }}</span>
+    <span *ngIf="data?.email" class="email">{{ data.email }}</span>
   </div>
 </div>

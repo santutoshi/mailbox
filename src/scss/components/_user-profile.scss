@@ -20,14 +20,20 @@
 
 .details {
   margin-left: 20px;
+  font-size: $h2-font__size;
+  letter-spacing: 0;
   h4 {
-    font-size: $h2-font__size;
     font-weight: 800;
     color: $brand__color-primary;
     line-height: 27px;
   }
-  p {
+  .email {
     font-size: $font__size__md;
     line-height: 27px;
+    display: flex;
+  }
+  .role {
+    font-size: inherit;
+    display: inline-block;
   }
 }

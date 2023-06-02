@@ -4,8 +4,9 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "build": "ng build",
-    "watch": "ng build --watch --configuration development",
+    "build": "npm run build-lib && ng build",
+    "watch": "npm run build-lib && ng build --watch --configuration development",
+    "build-lib": "cp projects/user-profile/package.json projects/user-profile/src/lib/source.json && ng build user-profile",
     "test": "ng test"
   },
   "private": true,

@@ -1,0 +1,33 @@
+<div class="row">
+  <div class="col-5 mail-list col-s-12">
+    <div class="query__search-container">
+      <span class="query__search-icon">
+        <svg
+          width="20"
+          height="20"
+          viewBox="0 0 20 20"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M9.17747 0.5C14.2204 0.5 18.3084 4.49778 18.3084 9.4293C18.3084 11.7566 17.398 13.8759 15.9064 15.4653L18.8399 18.3254C19.1149 18.5936 19.1155 19.029 18.8412 19.298C18.5919 19.5424 18.2012 19.5651 17.9257 19.3657L17.8467 19.2992L14.8786 16.4046C13.3162 17.6274 11.3342 18.3586 9.17747 18.3586C4.13458 18.3586 0.0465088 14.3608 0.0465088 9.4293C0.0465088 4.49778 4.13458 0.5 9.17747 0.5ZM9.17747 1.87535C4.91132 1.87535 1.45292 5.25737 1.45292 9.4293C1.45292 13.6012 4.91132 16.9832 9.17747 16.9832C13.4436 16.9832 16.902 13.6012 16.902 9.4293C16.902 5.25737 13.4436 1.87535 9.17747 1.87535Z"
+            fill="#8a8a8a"
+          />
+        </svg>
+      </span>
+      <div class="query__search-input-container">
+        <input type="search" class="query__search-input" />
+      </div>
+    </div>
+
+    <ng-container *ngFor="let inbox of mailData$ | async">
+      <app-mail-card
+        [data]="inbox"
+        (click)="selectedMail(inbox)"
+      ></app-mail-card>
+    </ng-container>
+  </div>
+  <div class="col-7 col-s-12">
+    <app-mail-detail [data]="selectedMailData"></app-mail-detail>
+  </div>
+</div>

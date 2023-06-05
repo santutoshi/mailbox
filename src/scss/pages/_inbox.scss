@@ -3,6 +3,30 @@
 .mail-list {
   background: $color__dark-grey-300;
   padding: 51px 30px 57px 30px;
+  height: 100vh;
+  overflow-y: scroll;
+  //Scroll bar
+  /* width */
+  &::-webkit-scrollbar {
+    width: 8px;
+  }
+
+  /* Track */
+  &::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px rgb(148, 133, 133);
+    border-radius: 10px;
+  }
+
+  /* Handle */
+  &::-webkit-scrollbar-thumb {
+    background: rgb(148, 138, 138);
+    border-radius: 10px;
+  }
+
+  /* Handle on hover */
+  &::-webkit-scrollbar-thumb:hover {
+    background: #746e6e;
+  }
   .profile-block {
     display: flex;
     align-items: start;

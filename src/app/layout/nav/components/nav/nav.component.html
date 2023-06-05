@@ -8,20 +8,36 @@
   ></lib-user-profile>
   <ul>
     <div *ngFor="let nav of navMenuItems | groupBy : 'group' : 'service'">
-      <li class="nav-item" routerLinkActive="active" [routerLink]="nav.link">
+      <li
+        class="nav-item"
+        routerLinkActive="active"
+        [routerLink]="nav.link"
+        ng-disabled="nav.isDisabled"
+      >
         <a class="nav-link" aria-current="page">
           <span [ngClass]="nav.icon"></span>
           {{ nav.name }}</a
         >
+        <span class="badge badge-red" *ngIf="nav.notificationCount > 0">{{
+          nav.notificationCount
+        }}</span>
       </li>
     </div>
   </ul>
 
   <div class="folder">
-    <h1>Folders</h1>
+    <h1>
+      Folders
+      <span class="badge badge-blue">Add</span>
+    </h1>
     <ul>
       <div *ngFor="let g of navMenuItems | groupBy : 'group' : 'group'">
-        <li class="nav-item" routerLinkActive="active" [routerLink]="g.link">
+        <li
+          class="nav-item"
+          routerLinkActive="active"
+          [routerLink]="g.link"
+          ng-disabled="nav.isDisabled"
+        >
           <a class="nav-link" aria-current="page">
             <span [ngClass]="g.icon"></span>
             {{ g.name }}</a

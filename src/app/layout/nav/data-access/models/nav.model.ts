@@ -43,6 +43,7 @@ export const MENU_ITEMS: Array<MenuItem> = [
     link: '/trash',
     icon: 'icon icon-trash',
     notificationCount: 0,
+    isDisabled: true,
     group: 'service',
   },
   {
@@ -50,18 +51,21 @@ export const MENU_ITEMS: Array<MenuItem> = [
     link: '/more',
     icon: 'icon icon-more',
     notificationCount: 0,
+    isDisabled: true,
     group: 'service',
   },
   {
     name: 'Office',
     link: '/office',
     icon: 'icon icon-folder office',
+    isDisabled: true,
     group: 'group',
   },
   {
     name: 'Personal',
     link: '/personal',
     icon: 'icon icon-folder personal',
+    isDisabled: true,
     group: 'group',
   },
   {
@@ -69,5 +73,6 @@ export const MENU_ITEMS: Array<MenuItem> = [
     link: '/freelance',
     icon: 'icon icon-folder freelance',
     group: 'group',
+    isDisabled: true,
   },
 ];

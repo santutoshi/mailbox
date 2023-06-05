@@ -7,6 +7,10 @@
   height: 100vh;
   background-color: $color__light-grey-background;
 
+  .btn {
+    min-width: 270px;
+  }
+
   ul {
     list-style-type: none;
     margin: 0;
@@ -23,6 +27,7 @@
     color: $color-text;
     box-shadow: none;
     font-size: $font__size__x-lg;
+    line-height: 38px;
   }
   .collapse {
     display: none;
@@ -31,12 +36,13 @@
   .profile {
     padding: 42px 0 39px 52px;
   }
-
+  .badge {
+    margin-left: 62px;
+  }
   .button {
-    margin: 0;
-    position: absolute;
+    margin: auto;
     display: table;
-    width: 100%;
+    padding-top: 100px;
   }
 
   .folder {
@@ -58,7 +64,7 @@ li.nav-item.active {
   &::before {
     content: "";
     position: absolute;
-    height: 40px;
+    height: 54px;
     width: 8px;
     left: 0px;
     top: 2px;
@@ -89,6 +95,16 @@ li.nav-item.active {
   .navbar-nav a.collapse {
     float: right;
     display: block;
+  }
+
+  ul {
+    display: none;
+  }
+  .navbar-nav {
+    display: none;
+    &lib-user-profile {
+      display: none;
+    }
   }
 }
 

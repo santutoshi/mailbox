@@ -16,6 +16,13 @@ export const contentRoutes: Routes = [
         loadChildren: () =>
           import('../../modules/inbox/inbox.module').then((m) => m.InboxModule),
       },
+      {
+        path: 'flagged',
+        loadChildren: () =>
+          import('../../modules/flagged/flagged.module').then(
+            (m) => m.FlaggedModule
+          ),
+      },
     ],
   },
 ];
